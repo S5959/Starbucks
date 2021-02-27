@@ -22,8 +22,8 @@ driver.get(login_URL)
 html = driver.page_source
 
 # 로그인 진행
-driver.find_element_by_name("user_id").send_keys("skybs1962")
-driver.find_element_by_name("user_pwd").send_keys("gksmfskfk1!")
+driver.find_element_by_name("user_id").send_keys("아이디")
+driver.find_element_by_name("user_pwd").send_keys("비밀번호")
 driver.find_element_by_xpath('/html/body/div[7]/div[7]/div/div/div/form/fieldset/section[1]/div[1]/p[3]/a').click()
 
 # alert창 예외처리
