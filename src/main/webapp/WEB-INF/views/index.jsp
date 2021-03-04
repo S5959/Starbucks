@@ -20,7 +20,6 @@
 	<link href="${pageContext.request.contextPath}/resources/css/main.css" rel="stylesheet" type="text/css">
 	<!-- bxSlider CSS file -->
 	<link href="${pageContext.request.contextPath}/resources/css/common/jquery.bxslider.css" rel="stylesheet">
-	
 	<!-- jQuery library -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<!-- bxSlider Javascript file -->
@@ -79,25 +78,6 @@
 							<a href="#"> 자세히 보기 </a>
 						</div>
 					</div>
-					
-					<%-- layer_floating --%>
-					<%-- 
-					<div class="layer_floating">
-						<div class="xams-freq">
-							<a href="#" title="자세히 보기">
-								<img src="${pageContext.request.contextPath}/resources/images/main/badge_efreq_pc_2020winter.png" alt="" class="pc_badge"> 
-								<img src="${pageContext.request.contextPath}/resources/images/main/badge_efreq_m_2020winter.png" alt="" class="m_badge">
-							</a>
-						</div>
-
-						<div class="plcc">
-							<a href="#" title="hyundai card + starbucks">
-								<img src="${pageContext.request.contextPath}/resources/images/main/plcc_badge_pc.png" alt="" class="pc_badge">
-								<img src="${pageContext.request.contextPath}/resources/images/main/plcc_badge_mobile.png" alt="" class="m_badge">
-							</a>
-						</div>
-					</div>
-					--%>
 				</div>
 			</div>
 			<!-- main top end -->

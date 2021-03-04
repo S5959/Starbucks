@@ -18,7 +18,7 @@
 							<li class="util_nav01 sign_out" style="display:none;"><a href="#">Sign out</a></li> -->
 							<c:choose>
 								<c:when test="${not empty member}">
-									<li class="util_nav01 sign_out"><a href="${pageContext.request.contextPath}/member/memberLogout">Sign out</a></li>
+									<li class="util_nav01 sign_out"><a href="https://kauth.kakao.com/oauth/logout?client_id=3ac929f4709593497dba068a1f72cc96&logout_redirect_uri=http://localhost${pageContext.request.contextPath}/member/memberLogout&state=logout HTTP/1.1">Sign out</a></li>
 									<li class="util_nav02"><a href="${pageContext.request.contextPath}/my/myIndex">My Starbucks</a></li>
 								</c:when>
 								<c:otherwise>

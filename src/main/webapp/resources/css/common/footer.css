@@ -80,7 +80,7 @@ footer { width:100%; padding:32px 0 35px 0; background:#2C2A29; clear:both; posi
 	.copyright a { color:#ccc; padding:0 10px; border-right:1px solid #393939; font-size:12px; }
 	.copyright a.c_00b050 { color:#00b050 !important; font-weight:bold; }
     .copyright a.last { border-right:0; }
-	.copyright a.btned_link { width:90px; height:30px; line-height:30px; margin:10px 2px 0 3px; color:#fff; background:none; border:2px solid #fff; border-radius:3px; display:inline-block; }
+	.copyright a.btned_link { width:100px; height:30px; line-height:30px; margin:10px 2px 0 3px; color:#fff; background:none; border:2px solid #fff; border-radius:3px; display:inline-block; }
 
     .copyright ul.copy_menu { padding:25px 0 5px 0; margin:0 auto; text-align:center; }
     .copyright ul.copy_menu:after { content:""; display:block; clear:both; }

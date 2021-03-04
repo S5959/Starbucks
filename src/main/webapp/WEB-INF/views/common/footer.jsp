@@ -106,9 +106,7 @@
 		<a href="https://www.starbucks.co.kr/footer/etc/rules_loc.do" class="mbn" target="_blank">위치정보 이용약관</a>
 		<a href="https://www.starbucks.co.kr/footer/etc/rules_msr.do" class="mbn" target="_blank">스타벅스 카드 이용약관</a>
 		<a href="https://www.starbucks.co.kr/footer/etc/rules_non.do" class="mbn" target="_blank">비회원 이용약관</a>
-		<span class="br">
-			<a href="https://www.starbucks.co.kr/footer/etc/rules_mdp.do" target="_blank">My DT Pass 서비스 이용약관</a>
-		</span>
+		<a href="https://www.starbucks.co.kr/footer/etc/rules_mdp.do" target="_blank">My DT Pass 서비스 이용약관</a>
 		<a href="https://www.starbucks.co.kr/footer/etc/hotline.do" class="last" target="_blank">윤리경영 핫라인</a>
 		<br>
 		<a class="btned_link" href="https://www.starbucks.co.kr/footer/etc/coming_route.do" target="_blank">찾아오시는 길</a>

@@ -17,9 +17,10 @@
 	<link href="${pageContext.request.contextPath}/resources/css/common/reset.css" rel="stylesheet" type="text/css">
 	<link href="${pageContext.request.contextPath}/resources/css/common/header.css?v=1" rel="stylesheet" type="text/css">
 	<link href="${pageContext.request.contextPath}/resources/css/common/footer.css?v=1" rel="stylesheet" type="text/css">
-	<link href="${pageContext.request.contextPath}/resources/css/member/memberLogin.css?v=1" rel="stylesheet" type="text/css">
+	<link href="${pageContext.request.contextPath}/resources/css/member/memberLogin.css?v=2" rel="stylesheet" type="text/css">
 	<link href="${pageContext.request.contextPath}/resources/css/common/jquery.bxslider.css" rel="stylesheet">
 	
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<script src="${pageContext.request.contextPath}/resources/js/common/jquery.bxslider.min.js"></script>
 	<script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
@@ -41,13 +42,10 @@
 				<div class="find_mem_inner">
 					<form id="frmLogin" action="./memberLogin" method="post">
 						<fieldset>
-							<legend class="hid">회원가입 이용약관 동의, 수집하는 개인정보의 항목, 개인정보의
-								수집 및 이용목적, 개인정보의 보유 및 이용기간 및 파기절차, 파기 방법에 관한 폼</legend>
 							<strong class="login_ttl">로그인</strong>
 							<section class="joinform">
 								<p class="find_form_txt">
-									<span class="t_006633">Welcome!</span>
-									<br class="for_mob" />스타벅스커피 코리아에 오신 것을 환영합니다.
+									<span class="t_006633">Welcome! </span><br class="for_mob"/>스타벅스커피 코리아에 오신 것을 환영합니다.
 								</p>
 
 								<div class="login_input_box bd_none">
@@ -71,7 +69,7 @@
 									
 									<p class="input_warn_text t_006633">
 										* 타 사이트와 비밀번호를 동일하게 사용할 경우 도용의 위험이 있으므로, 정기적인 비밀번호 변경을 해주시길 바랍니다.<br /> 
-										* 스타벅스 커피 코리아의 공식 홈페이지는 Internet Explorer 9.0 이상, Chrome, Firefox, Safari 브라우저에 최적화 되어있습니다.
+										* 관리자의 경우 페이지 이동 후 별도로 로그인 해주시길 바랍니다.
 									</p>
 									<!-- <div class="btn_mem_sns_login">
 										<p class="naver_login">
@@ -97,8 +95,8 @@
 								<div class="login_btn_wrap">
 									<ul>
 										<li><a href="${pageContext.request.contextPath}/member/memberJoin1">회원가입</a></li>
-										<li><a href="#">아이디 찾기</a></li>
-										<li class="last"><a href="#">비밀번호 찾기</a></li>
+										<li><a href="#id_modal" class="id_search" data-toggle="modal" role="button">아이디 찾기</a></li>
+										<li class="last"><a href="#" class="pw_search">비밀번호 찾기</a></li>
 									</ul>
 								</div>
 							</section>
@@ -143,6 +141,37 @@
 	<!-- Footer -->
 	<c:import url="../common/footer.jsp"></c:import>
 	<!-- Footer End -->
+
+	<!-- ID 찾기 모달창 -->
+	<div id="id_modal" class="modal fade" role="dialog">
+		<div class="modal-dialog" role="document">
+		
+			<!-- Modal content-->
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+					<h4 class="modal-title">아이디 찾기</h4>
+				</div>
+				<div class="modal-body">
+					<p>가입한 이름과 메일을 적어주세요</p>
+					<div class="reserve-info">
+						<ul class="reserve-info-wrap">
+							<li><span class="tit">이름 </span><input type="text" name="name" class="name"></li>
+							<li><span class="tit">이메일 </span> <input type="text" name="email" class="email"></li>
+						</ul>
+						<button id="find">찾기</button>
+						<div id="result"></div>
+						<div id="findResult"></div>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+	<!-- ID 찾기 모달창 End -->
 	
 	<script src="${pageContext.request.contextPath}/resources/js/common/header.js?v=1"></script>
 	<script src="${pageContext.request.contextPath}/resources/js/common/footer.js?v=1"></script>
