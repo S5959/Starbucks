@@ -268,7 +268,7 @@ public class MemberUserController {
 	@PostMapping("emailAuthSend")
 	public ModelAndView setEmailAuthSend(AuthDTO authDTO, HttpServletRequest request, HttpServletResponse response, HttpSession session)  throws Exception {
 		ModelAndView mv = new ModelAndView();
-		System.out.println("send ---------------- "+authDTO.getEmail());
+		System.out.println(" 보내는 이메일 : "+authDTO.getEmail());
 		/* 인증번호 생성 */
 		Random r = new Random();
 		r.setSeed(System.currentTimeMillis());
@@ -277,7 +277,7 @@ public class MemberUserController {
 			authKey = authKey - 100000;
 		}
 		authDTO.setAuthKey(authKey);
-        System.out.println("(271)************************************************* 발급 인증키 : " + authKey);
+        System.out.println("(280) 발급 인증키 : " + authKey);
         
 		String sendTime = new SimpleDateFormat("yyyy-MM-dd hh24:mm:ss").format(Calendar.getInstance().getTime());
 		sendTime = sendTime.substring(0, 19);
@@ -287,7 +287,7 @@ public class MemberUserController {
         String setfrom = "admin@starbucks.com";
         String tomail = authDTO.getEmail(); 	// 받는 사람 이메일
         String title = "회원가입 인증 이메일 입니다."; 	// 제목
-        String content =
+        String content =						// 메일 내용
         	System.getProperty("line.separator") +                        
         	"안녕하세요. 회원님! 저희 홈페이지를 찾아주셔서 감사합니다." +
         	System.getProperty("line.separator") +
@@ -301,9 +301,9 @@ public class MemberUserController {
             MimeMessage message = mailSender.createMimeMessage();
             MimeMessageHelper messageHelper = new MimeMessageHelper(message, true, "UTF-8");
 
-            messageHelper.setFrom(setfrom); 	// 보내는사람 생략하면 정상작동을 안함
+            messageHelper.setFrom(setfrom); 	// 보내는사람 (생략 불가 -> 에러발생)
             messageHelper.setTo(tomail); 		// 받는사람 이메일
-            messageHelper.setSubject(title); 	// 메일제목은 생략이 가능하다
+            messageHelper.setSubject(title); 	// 메일 제목 (생략 가능)
             messageHelper.setText(content); 	// 메일 내용
             
             mailSender.send(message);
